@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2018",
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": false,
+    "strict": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "lib": [
+      "es6"
+    ],
+    "paths": {
+      "infra/*": [
+        "src/infra/*"
+      ],
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "proxies/*": [
+        "src/proxies/*"
+      ],
+      "validators/*": [
+        "src/validators/*"
+      ],
+      "services/*": [
+        "src/services/*"
+      ],
+      "processors/*": [
+        "src/processors/*"
+      ],
+      "*": [
+        "node_modules/*",
+        "src/types/*"
+      ]
+    }
+  },
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*",
+    "index.d.ts"
+  ]
+}
+
